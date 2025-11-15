@@ -1,13 +1,143 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 13%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+    
+    --chat-user: 217 91% 60%;
+    --chat-assistant: 220 14% 96%;
+    --diagram-bg: 220 14% 98%;
+    
+    /* Gradient colors - left side */
+    --gradient-left-1: 0 64% 47%;
+    --gradient-left-2: 228 81% 63%;
+    --gradient-left-3: 0 100% 5%;
+    
+    /* Gradient colors - right side */
+    --gradient-right-1: 237 90% 62%;
+    --gradient-right-2: 247 54% 67%;
+    --gradient-right-3: 242 49% 56%;
+    --gradient-right-4: 255 42% 54%;
+    --gradient-right-5: 249 37% 53%;
+    --gradient-right-6: 0 70% 60%;
+    --gradient-right-7: 357 85% 77%;
+    --gradient-right-8: 354 100% 63%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 13% 10%;
+    --foreground: 220 13% 98%;
+
+    --card: 220 13% 10%;
+    --card-foreground: 220 13% 98%;
+
+    --popover: 220 13% 10%;
+    --popover-foreground: 220 13% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 13% 98%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 217 91% 60%;
+    
+    --chat-user: 217 91% 60%;
+    --chat-assistant: 220 13% 15%;
+    --diagram-bg: 220 13% 12%;
+    
+    /* Gradient colors - left side */
+    --gradient-left-1: 0 64% 47%;
+    --gradient-left-2: 228 81% 63%;
+    --gradient-left-3: 0 100% 5%;
+    
+    /* Gradient colors - right side */
+    --gradient-right-1: 237 90% 62%;
+    --gradient-right-2: 247 54% 67%;
+    --gradient-right-3: 242 49% 56%;
+    --gradient-right-4: 255 42% 54%;
+    --gradient-right-5: 249 37% 53%;
+    --gradient-right-6: 0 70% 60%;
+    --gradient-right-7: 357 85% 77%;
+    --gradient-right-8: 354 100% 63%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
